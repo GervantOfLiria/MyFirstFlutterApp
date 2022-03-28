@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+void main()=> runApp(MaterialApp(
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.deepPurple.shade700,
+      appBar: AppBar(
+        title: Text(
+          'SmokinSexyStyle',
+          style: TextStyle(
+            fontFamily: 'IndieFlower',
+            fontSize: 40,
+            color: Colors.deepPurple.shade700,
+          ),
+        ),
+        backgroundColor: Colors.amber,
+      ),
+      body: Center(
+        child: Image.network('https://u.livelib.ru/character/1000005187/o/evc8q72n/o-o.jpeg'),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.amber,
+        label: Icon(
+          Icons.heart_broken_rounded,
+          color: Colors.deepPurple.shade700,
+        ),
+        onPressed: () {},
+      ),
+    );
+  }
+}

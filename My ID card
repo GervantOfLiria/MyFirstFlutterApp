@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+void main() => runApp(MaterialApp(
+  home: MyCard(),
+));
+class MyCard extends StatelessWidget {
+  const MyCard({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        title: Text('Alex Avanesyan ID card'),
+        centerTitle: true,
+        backgroundColor: Colors.grey[800],
+        elevation: 0,
+      ),
+      body:Padding(
+        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage('https://psv4.userapi.com/c237031/u145244228/docs/d2/b98b46048ac6/sus.png?extra=pTRD2gaK28wl_PLWX8NVRBqXT3_T-V-adowSz3Egy06YHaSBixZBR-YOOm8E8L2dMzbLVO2Iopm5Idb5OmKmBk30FrbF7B0YrkwxbFh9KFDFL0Cc3BXzfVRiL6Qh8lX9dOdWRjG8PJfPWfjGJnj083qeMA'),
+                backgroundColor: Colors.transparent,
+                radius: 40,
+              ),
+            ),
+            Divider(height: 90, color: Colors.grey[500],),
+            Text(
+                'NAME',
+          style: TextStyle(
+            color: Colors.grey[200],
+            letterSpacing: 2,
+        )
+            ),
+            SizedBox(height: 5),
+            Text(
+                'Alexander Avaneysan',
+                style: TextStyle(
+                  color: Colors.amberAccent,
+                  letterSpacing: 2,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            SizedBox(height: 30),
+            Text(
+                'Current Flutter Level',
+                style: TextStyle(
+                  color: Colors.grey[200],
+                  letterSpacing: 2,
+                )
+            ),
+            SizedBox(height: 5),
+            Text(
+                '2',
+                style: TextStyle(
+                  color: Colors.amberAccent,
+                  letterSpacing: 2,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            SizedBox(height: 30),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 5),
+                Text(
+                    'alex-avaneysan@inbox.ru',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18,
+                    letterSpacing: 1,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
